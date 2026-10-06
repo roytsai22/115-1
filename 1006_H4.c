@@ -1,27 +1,28 @@
 #include <stdio.h>
 int main()    
 {
-    int age;
-    int license;
-    printf("請輸入年齡:");
-    scanf("%d",&age);
-    printf("請輸入有無駕照1有0無:");
-    scanf("%d",&age);
+    int login;
+    int 帳戶餘額;
+    int 提款餘額;
+    int 黑名單狀態;
+    printf("請輸入登入狀態(1:已登入,0:未登入):");
+    scanf("%d",&login);
+    printf("請輸入帳戶餘額:");
+    scanf("%d",&帳戶餘額);
+    printf("請輸入提款金額:");
+    scanf("%d",&提款餘額);
+    printf("請輸入黑名單狀態(1:是,0:否):");
+    scanf("%d",&黑名單狀態);
+    if (login==1 && 帳戶餘額>=提款餘額 && !黑名單狀態)
     {
-        printf("請輸入出席率(%):");
-    scanf("%d",&attendance);
-    
-        if (attendance>=80)
-        {
-            printf("課程通過 ");
-        }
-        else
+        printf("可提款 ");
+    }
+    else
 
-        {
-        printf("成績不及格 ");
-        }
-    }
-      else 
     {
-        printf("成績不及格");
+        printf("不可提款 ");
     }
+    return 0;
+}
+        
+  
